@@ -1,16 +1,45 @@
 import React, { useState } from 'react';
-function LearnState(){
-    const [inputValue,newInputValue] = useState('salman')
-    console.log(inputValue);
-    const onchange = (event)=>{
-         const newValue = (event.target.value);
-         newInputValue(newValue)
-    }
-    return (
-        <>
-        <h1>{inputValue}</h1>
-        <input type="text" value={inputValue} placeholder="What's Your Name" onChange={onchange}/>
-        </>
-      );
+
+function LearnState() {
+  const [inputValue, setInputValue] = useState('salman');
+
+  const onchange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  // Styles
+  const containerStyle = {
+    textAlign: 'center',
+    marginTop: '50px',
+    fontFamily: 'Arial, sans-serif',
+  };
+
+  const inputStyle = {
+    padding: '10px',
+    fontSize: '16px',
+    borderRadius: '5px',
+    border: '2px solid #ccc',
+    outline: 'none',
+    marginTop: '10px',
+    width: '250px',
+  };
+
+  const headingStyle = {
+    color: '#37b100',
+  };
+
+  return (
+    <div style={containerStyle}>
+      <h1 style={headingStyle}>{inputValue}</h1>
+      <input
+        style={inputStyle}
+        type="text"
+        value={inputValue}
+        placeholder="What's Your Name"
+        onChange={onchange}
+      />
+    </div>
+  );
 }
-export default LearnState
+
+export default LearnState;
