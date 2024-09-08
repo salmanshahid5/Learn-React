@@ -1,6 +1,6 @@
 import './App.css';
-import LearnState from './components/Usestate/usestate';
-import Counter from './components/Counter/counter'
+// import LearnState from './components/Usestate/usestate';
+import  Counter  from './components/Counter/counter';
 
 // function Card(props) {
 //   console.log(props);
@@ -21,7 +21,7 @@ function App() {
     //   ))}
     // </div>
     <div>
-    <LearnState/>
+    {/* <LearnState/> */}
     <Counter />
     </div>
   );
