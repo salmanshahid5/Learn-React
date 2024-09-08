@@ -25,7 +25,7 @@ function LearnState() {
   };
 
   const headingStyle = {
-    color: '#37b100',
+    color: "black",
   };
 
   return (
